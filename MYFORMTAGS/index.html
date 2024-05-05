@@ -9,11 +9,17 @@
   <form>
     <!-- 改行を含まない一行だけのテキストボックス -->
     <div>
-    <input type="text">
+      <!-- どの入力部品に関するものなのか明示するとPCやブラウザが解釈しやすくなる。 -->
+      <!-- labelとtextboxのそれぞれにforとidをつける -->
+      <!-- 画面上でラベルをクリックすると入力部分が青くなり(フォーカスがあたり)すぐに入力できるようになる -->
+      <!-- 目の不自由な方向けにフォーカスがあたるとラベルを読み上げる機能が使える -->
+      <label for="name">お名前</label>
+    <input type="text" id="name">
     </div>
     <!-- 改行を含む複数行のテキストボックス -->
     <div>
-    <textarea></textarea>
+      <label for="content">内容</label>
+    <textarea id="content"></textarea>
     </div>
   </form>
   
