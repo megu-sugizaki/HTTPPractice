@@ -11,14 +11,24 @@
     <div>
       <label for="name">お名前
         <!-- labelの中に入れた場合、idやfor属性は不要になる -->
-        <input type="text" placeholder="例：山田太郎">
+        <input type="text">
       </label>
+    </div>
+    <div>
+      <!-- 全体に対して何らかの説明を加えたい 入力部品をグループ化-->
+      <fieldset>
+        <!-- グループの説明 -->
+        <legend>対象の商品</legend>
+        <input type="checkbox">商品A
+        <input type="checkbox">商品B
+        <input type="checkbox">商品C
+      </fieldset>
     </div>
     <!-- 改行を含む複数行のテキストボックス -->
     <div>
       <label>内容
         <!-- labelの中に入れた場合、idやfor属性は不要になる -->
-        <textarea placeholder="例；商品が届きません。"></textarea>
+        <textarea></textarea>
       </label>
     </div>
   </form>
