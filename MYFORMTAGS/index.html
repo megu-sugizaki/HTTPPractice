@@ -24,6 +24,18 @@
         <input type="checkbox">商品C
       </fieldset>
     </div>
+    <div>
+      <!-- 1つしか選択できないチェックボックス-->
+      <fieldset>
+        <!-- グループの説明 -->
+        <legend>延長保証</legend>
+        <!-- 1つしか選べないようにするためにname属性を指定 -->
+        <!-- 複数を選べるラジオボタンというのは存在しない -->
+        <input type="radio" name = "warranty">加入済み
+        <input type="radio" name="warranty">未加入
+        <input type="radio" name="warranty">わからない
+      </fieldset>
+    </div>
     <!-- 改行を含む複数行のテキストボックス -->
     <div>
       <label>内容
