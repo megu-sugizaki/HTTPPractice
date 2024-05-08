@@ -11,7 +11,8 @@
     <div>
       <label for="name">お名前
         <!-- labelの中に入れた場合、idやfor属性は不要になる -->
-        <input type="text">
+        <!-- valueを設定するとデフォルトの値を設定できる -->
+        <input type="text" value="山田太郎">
       </label>
     </div>
     <div>
@@ -19,7 +20,8 @@
       <fieldset>
         <!-- グループの説明 -->
         <legend>対象の商品</legend>
-        <input type="checkbox">商品A
+        <!-- あらかじめcheckedをつけておくとここが選択された状態になる　="checked"は属性名と同じため省略可能 -->
+        <input type="checkbox" checked="checked">商品A
         <input type="checkbox">商品B
         <input type="checkbox">商品C
       </fieldset>
@@ -31,7 +33,8 @@
         <legend>延長保証</legend>
         <!-- 1つしか選べないようにするためにname属性を指定 -->
         <!-- 複数を選べるラジオボタンというのは存在しない -->
-        <input type="radio" name = "warranty">加入済み
+        <!-- checkedをつけておくこともできるが1つしか選択できないので注意 -->
+        <input type="radio" name = "warranty" checked>加入済み
         <input type="radio" name="warranty">未加入
         <input type="radio" name="warranty">わからない
       </fieldset>
@@ -44,7 +47,8 @@
         <!-- ただし、コマンドを押しながら選択しないといけないため、ユーザーにとっては使いづらい -->
       <select>
         <!-- <option>-- お問い合わせ種別を選択してください --</option> -->
-        <option>商品が届かない</option>
+        <!-- ="selected"の部分は省略可能 -->
+        <option selected = "selected">商品が届かない</option>
         <option>商品が届かない</option>
         <option>間違えて注文した</option>
         <option>決済方法を変えたい</option>
@@ -56,7 +60,10 @@
     <div>
       <label>内容
         <!-- labelの中に入れた場合、idやfor属性は不要になる -->
-        <textarea></textarea>
+        <!-- textareaのデフォルト値は字下げ（tab）が反映されてしまうので、字下げをしたくない場合はこのように書く -->
+        <textarea>こんにちは。
+こんにちは。
+        </textarea>
       </label>
     </div>
     <div>
