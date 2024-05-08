@@ -10,70 +10,27 @@
     <!-- 改行を含まない一行だけのテキストボックス -->
     <div>
       <label for="name">お名前
-        <!-- labelの中に入れた場合、idやfor属性は不要になる -->
-        <!-- valueを設定するとデフォルトの値を設定できる -->
-        <input type="text" value="山田太郎">
+        <input type="text">
       </label>
     </div>
     <div>
-      <!-- 全体に対して何らかの説明を加えたい 入力部品をグループ化-->
-      <fieldset>
-        <!-- グループの説明 -->
-        <legend>対象の商品</legend>
-        <!-- あらかじめcheckedをつけておくとここが選択された状態になる　="checked"は属性名と同じため省略可能 -->
-        <input type="checkbox" checked="checked">商品A
-        <input type="checkbox">商品B
-        <input type="checkbox">商品C
-      </fieldset>
-    </div>
-    <div>
-      <!-- 1つしか選択できないチェックボックス-->
-      <fieldset>
-        <!-- グループの説明 -->
-        <legend>延長保証</legend>
-        <!-- 1つしか選べないようにするためにname属性を指定 -->
-        <!-- 複数を選べるラジオボタンというのは存在しない -->
-        <!-- checkedをつけておくこともできるが1つしか選択できないので注意 -->
-        <input type="radio" name = "warranty" checked>加入済み
-        <input type="radio" name="warranty">未加入
-        <input type="radio" name="warranty">わからない
-      </fieldset>
-    </div>
-    <div>
-      <!-- labelと関連づけたいのでlabel内にselectを配置 -->
-      <label>
-        <!-- ドロップダウンリストの作成 ドロップダウンリストの最初の3行の表示-->
-        <!-- リストボックスを作成する→複数個選択できるようになる multiple属性と中身が同じ場合="multiple"の部分は省略可能-->
-        <!-- ただし、コマンドを押しながら選択しないといけないため、ユーザーにとっては使いづらい -->
-      <select>
-        <!-- <option>-- お問い合わせ種別を選択してください --</option> -->
-        <!-- ="selected"の部分は省略可能 -->
-        <option selected = "selected">商品が届かない</option>
-        <option>商品が届かない</option>
-        <option>間違えて注文した</option>
-        <option>決済方法を変えたい</option>
-        <option>その他</option>
-      </select>
-      </label>
-    </div>
-    <!-- 改行を含む複数行のテキストボックス -->
-    <div>
-      <label>内容
-        <!-- labelの中に入れた場合、idやfor属性は不要になる -->
-        <!-- textareaのデフォルト値は字下げ（tab）が反映されてしまうので、字下げをしたくない場合はこのように書く -->
-        <textarea>こんにちは。
-こんにちは。
-        </textarea>
+      <!-- 入れた値を隠せる -->
+      <label for="password">パスワード
+        <input type="text"> 
       </label>
     </div>
     <div>
-      <!-- buttonタグなら画像を含めることもできるので普及 -->
-      <!-- disabledとすることで送信ボタンを無効化　すべて入力後に有効にするにはjavaScript等が必要 -->
-      <button disabled>送信</button>
-      <!-- 上下どちらでもボタン設定が可能 -->
-      <!-- <input type="button" value="送信"> -->
+      <!-- 数値以外入力不可　上下の矢印で数値をあげさげできる -->
+      <label for="number">数値
+        <input type="text">
+      </label>
+    </div>
+    <div>
+      <!-- 日付に特化 　カレンダーを表示-->
+      <label for="date">日付
+        <input type="text">
+      </label>
     </div>
   </form>
-  
 </body>
 </html>
